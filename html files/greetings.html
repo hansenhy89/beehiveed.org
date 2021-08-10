@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylesheets/greetings.css">
+</head>
+
+<body>
+	<div class="tab">
+		<button class="tablinks" data-tab="exercise1">Matching</button>
+		<button class="tablinks" data-tab="exercise2">Write Sentences</button>
+		<button class="tablinks" data-tab="exercise3">Choose</button>
+		<button class="tablinks" data-tab="exercise4">Listen and Write</button>
+		<button class="tablinks" data-tab="exercise5">Highlight</button>
+	  </div>
+
+<div>
+	<div class="exercise-content" id="exercise1">
+		<p>Listen and match the audio clip with the appropiate picture.</p>
+		<div id="parent">
+			<div id="leftSide">
+				<div id="dropzone"></div>
+				<audio controls><source src="files/Good Morning.m4a" type="audio/mpeg"></audio>
+				
+				<div id="dropzone"></div>
+				<audio controls><source src="files/Good Afternoon.m4a" type="audio/mpeg"></audio>
+			</div>
+
+			<div id="origin">
+				<img src="files/morning.png" class="draggable" id="myImage" draggable="true" dragstart="dragstart(e)";>
+			</div>
+			
+		</div>
+				<button id="submitButton" class='checkme' data-tab='exercise1'>Check Answers</button>
+	</div>
+
+	<div class="exercise-content" id="exercise2">
+			<p>Write original sentences using the following nouns</p>
+			<p>1. (Tony)<span id="spanSpace"></span><input type="text"></p>
+			<p>2. (sun)<span id="spanSpace"></span><input type="text"></p>
+			<p>3. (dog)<span id="spanSpace"></span><input type="text"></p>
+			<p>4. (Atlantic Ocean)<span id="spanSpace"></span><input type="text"></p>
+			<p>5. (Monday)<span id="spanSpace"></span><input type="text"></p>
+			<p>6. (shirt)<span id="spanSpace"></span><input type="text"></p>
+			<p>7. (Air France)<span id="spanSpace"></span><input type="text"></p>
+			<p>8. (store)<span id="spanSpace"></span><input type="text"></p>
+			<p>9. (book)<span id="spanSpace"><input type="text"></p>
+			<p>10. (Warner Brothers)<span id="spanSpace"></span><input type="text"></p>
+			<p>11. (clothes)<span id="spanSpace"></span><input type="text"></p>
+			<p>12. (computer)<span id="spanSpace"></span><input type="text"></p>
+			<p>13. (Empire State Building)<span id="spanSpace"></span><input type="text"></p>
+			<p>14. (floor)<span id="spanSpace"></span><input type="text"></p>
+			<p>15. (California)<span id="spanSpace"></span><input type="text"></p>
+		
+		</div>
+	
+	<div class="exercise-content" id="exercise3">
+	
+	<p>Common</p><br>
+	<div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	
+	<p>Proper</p><br>
+	<div class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	
+	<div id="imgDiv"><img id="drag1" src="https://m.outdoorrevival.com/wp-content/uploads/2018/05/pacific.jpeg" draggable="true" ondragstart="drag(event)" width="100" height="69">
+		<p id="imgpara">ocean</p>
+	</div>
+
+
+	</div>
+	
+
+</div>	  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script>
+	var exercise1_key = {
+		1: 'c',
+		2: 'c',
+		3: 'p',
+		4: 'c',
+		5: 'p',
+		6: 'p',
+		7: 'c',
+		8: 'p',
+		9: 'c',
+		10: 'p',
+		11: 'p',
+		12: 'p',
+		13: 'c',
+		14: 'c',
+		15: 'c',
+		16: 'p',
+		17: 'c',
+		18: 'p',
+		19: 'c',
+		20: 'c',
+		21: 'p',
+		22: 'p',
+		23: 'c',
+		24: 'p',
+		25: 'c',
+		26: 'p',
+		27: 'c',
+		28: 'p'
+
+
+	}
+
+
+
+	$(document).on('click','.checkme',function(){
+            //find the page we want to load
+            const tab = $(this).data('tab');
+            if (!tab){
+                return;
+            }
+
+			const answers = window[tab + '_key'];
+			//loop through questions and verify
+			$('.answer').html('');
+			let rightCount = 0;
+			$('.question').each(function(index, singleQuestion) {
+				console.log(singleQuestion);
+				const id = $(singleQuestion).attr('id');
+				const value = $(singleQuestion).val();
+				if (answers[id].toLowerCase() === value.toLowerCase()){
+					console.log('correct');
+					$('#' + id + '_answer').html('<i class="fas fa-check-circle correct"></i>');
+					rightCount++;
+				}else{
+					$('#' + id + '_answer').html('<i class="fas fa-times-circle wrong"></i>');
+				}
+			});
+
+			//show the correct %
+			const correct = (rightCount/questionTotal) * 100;
+			alert(correct + '%');
+    });
+
+
+
+let draggedItem = null;
+
+
+	const item = document.getElementById('myImage');
+
+	item.addEventListener('dragstart', function(e){
+		console.log('dragstart', e);
+		draggedItem = this;	
+		
+	});
+
+	item.addEventListener('dragend', function(e){
+		console.log('dragend', e);
+		draggedItem = null;
+	});
+
+	const finish = document.getElementById('dropzone');
+	
+	finish.addEventListener('dragover', function(e){
+		e.preventDefault();
+		
+	});
+	
+	finish.addEventListener('dragenter', function(e){
+		e.preventDefault();
+	});
+
+	finish.addEventListener('drop', function(e){
+		console.log('drop');
+		this.append(draggedItem);
+	});
+
+
+
+</script>
+
+</body>
+</html>
