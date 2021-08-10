@@ -1,0 +1,106 @@
+/*tabs*/
+.tab {
+  	overflow: hidden;
+  	border: 1px solid #ccc;
+  	
+}
+/*tab buttons*/
+
+.tab button {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	display: inline;
+	width: auto;
+}
+
+.tab button:hover {
+	border-bottom-style:solid;
+	border-bottom-width:5px;
+	border-bottom-color:#00B050;
+}
+
+.tab button:active {
+	border-bottom-style:solid;
+	border-bottom-width:5px;
+	border-bottom-color:#00B050;
+}
+
+/*style exercise 1*/
+#parent {
+	color: black;
+	display: flex;
+	font-family: sans-serif;
+	font-weight: bold;
+	padding-right:10px;
+  }
+  
+  .origin {
+	flex-basis: 100%;
+
+  }
+  
+ 
+  
+  #dropzone {
+	border:1px solid black;
+	border-radius:10px;
+	flex-basis: 50%;
+	flex-grow: 1;
+	height:150px;
+  }
+
+
+
+/*other styling*/
+
+#button2 {
+	width:auto;
+}
+
+#spanSpace{
+	padding:5px;
+}
+
+#submitButton{
+	height:45px;
+	width:200px;
+	margin:auto;
+	font-size:24px;
+	text-align:center;
+}
+
+#submitButton:hover {
+	background-color:rgb(0, 176, 80)
+}
+
+.exercise-content {
+	font-family:calibri;
+}
+
+
+
+.correct {
+	color: green;
+}
+
+.wrong {
+	color: red;
+}
+#instructions {
+	font-weight:700;
+	padding-left:20px;
+}	
+
+
+audio {
+	display:block;
+}
+
+.audioPara {
+	display:inline;
+	border:1px solid black;
+}
