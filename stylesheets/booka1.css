@@ -15,7 +15,7 @@ header {
 
 .logo {
     padding:5px 5px 0px 5px;
-    max-height:65px;
+    max-height:35px;
     max-width:auto;
     display:inline-block;
     cursor:pointer;
