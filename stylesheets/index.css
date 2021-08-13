@@ -8,8 +8,16 @@ margin:0;
   margin:5px;
 }
 
+.logoParagraph {
+ text-decoration:none; 
+ color:yellow;
+ font-size:35px;
+  display:inline-block;
+}
+
 #homeDiv {
   display:inline-block;
+
 }
 
 header {
