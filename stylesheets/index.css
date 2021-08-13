@@ -9,7 +9,7 @@ header {
     align-items:center;
     height:75px;
     width:100vw;
-    opacity:0;
+    background-color: yellow;
 }
 
 .logo {
@@ -44,7 +44,7 @@ header {
 	height:75px;
     margin:0;
     padding:0;
-	opacity:0;
+	
     clip-path:polygon(0px 0px, 100% 0px, 70% 100%, 0px 100%);
     display:inline-block;
 }
