@@ -1,34 +1,35 @@
 * {
-margin:0;
-background-image: url("images\girlStudying.jpg")
+    margin:0;
+
+    }
+
+.center {
+    padding:50%;
+}
+    .logo {
+      max-height:180px;
+      display:block;
+      margin:auto;
+      padding:50%;
+    }
+    
+    .logoParagraph {
+     font-family:calibri;
+     font-size:35px;
+     display:block;
+     text-align:center;
+     font-weight:600px;
+     color:yellow;
+    }
+    
+button {
+    border-radius:25px;
+    font-size:18px;
+    display:block;
+    
 }
 
-header {
-  height:65px;
-  margin:0;
-  color:yellow;
-}
+button:hover {
 
-.logo {
-  max-height:35px;
-  display:inline-block;
-  margin:5px;
-}
-
-.logoParagraph {
- text-decoration:none; 
- font-family:calibri;
- font-size:35px;
- display:inline-block;
-}
-
-nav {
-  display:inline-block;
-}
-
-.nav_links a {
-  float:right;
-  text-deocartion:none;
-  list-style-type:none;
 }
 
