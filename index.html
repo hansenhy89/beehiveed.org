@@ -27,7 +27,26 @@
         <h1>Pop up login</h1>
         <a href="#" class="button">Login</a>
     </div>
+    
+    <div class="popup">
+        <div class="popup-content">
+            <img src="close.png">
+            <img src="user.png">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <a href="#" class="button">Login</a>
+        </div>
+    </div>
   
+    
+    
+<script>
+    document.getElementById("button").addEventListener("click", function() {
+        document.querySelector(".popup").style.display = "flex";
+        
+    document.querySelector(".close").addEventListener("click", function() {
+        document.querySelector(".popup").style.display = "none";
+</script>
 </body>
 
 <html>
