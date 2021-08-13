@@ -9,8 +9,7 @@ header {
     align-items:center;
     height:75px;
     width:100vw;
-    background:yellow;
-    color:yellow;
+    opacity:0;
 }
 
 .logo {
