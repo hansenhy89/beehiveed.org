@@ -11,8 +11,9 @@ margin:0;
 .logoParagraph {
  text-decoration:none; 
  color:yellow;
+ font-family:calibri;
  font-size:35px;
-  display:inline-block;
+ display:inline-block;
 }
 
 #homeDiv {
