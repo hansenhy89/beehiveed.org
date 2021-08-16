@@ -3,6 +3,11 @@
 
     }
 
+body {
+    background-image: url("image/girlStudying.jpg");
+    background-size:cover;
+}
+
 .center {
     padding-top:50%;
 }
