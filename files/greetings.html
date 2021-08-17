@@ -9,53 +9,61 @@
 
 <body>
 	<script src="jsfiles/greetings.js"></script>
-    <div class="tab">
-    <button class="tablinks" data-tab="exercise1">Matching</button>
-    <button class="tablinks" data-tab="exercise2">Write Sentences</button>
-    <button class="tablinks" data-tab="exercise3">Choose</button>
-    <button class="tablinks" data-tab="exercise4">Listen and Write</button>
-    <button class="tablinks" data-tab="exercise5">Highlight</button>
-    </div>
-	<div>
-	<div class="exercise-content" id="exercise1">
-		<p>Listen and match the audio clip with the appropiate picture.</p>
-    <div id="parent">
-      <div id="target-blocks">
-<div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
-  <p draggable="true" ondragstart="evdragstart(event)" id="e1">
-       </p>
-  <h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
-       </h5>
-  <ul draggable="true" ondragstart="evdragstart(event)" id="e3">
-  </ul>
-  </div> 
-  <audio controls><source src="audio files/Good Morning.m4a" type="audio/mpeg"></audio>
-  <div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
-  <p draggable="true" ondragstart="evdragstart(event)" id="e1">
-  </p>
-  <h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
-  </h5>
-  <ul draggable="true" ondragstart="evdragstart(event)" id="e3">
-  </ul>
-</div> 
-<audio controls><source src="audio files/Good Afternoon.m4a" type="audio/mpeg"></audio>
-  <div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
-  <p draggable="true" ondragstart="evdragstart(event)" id="e1">
-  </p>
-  <h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
-  </h5>
-  <ul draggable="true" ondragstart="evdragstart(event)" id="e3">
-  </ul>
-</div> 
-<audio controls><source src="audio files/Good Night.m4a" type="audio/mpeg"></audio>
-  </div>
-<div id="origin" ondragover="evdragover(event)" ondrop="evdrop(event,this)">
-  <img src="images/morning.png" alt="logo" 
-      draggable="true" ondragstart="evdragstart(event)" id="e4"/>
-</div> 
-</div>
-				<button id="submitButton" class='checkme' data-tab='exercise1'>Check Answers</button>
+	<div class="tab">
+		<button class="tablinks" data-tab="exercise1">Matching</button>
+                <button class="tablinks" data-tab="exercise2">Write Sentences</button>
+                <button class="tablinks" data-tab="exercise3">Choose</button>
+                <button class="tablinks" data-tab="exercise4">Listen and Write</button>
+                <button class="tablinks" data-tab="exercise5">Highlight</button>
 	</div>
+	<div>
+		<div class="exercise-content" id="exercise1">
+		<p>Listen and match the audio clip with the appropiate picture.</p>
+			<div id="parent">
+				<div id="target-blocks">
+					<div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
+						<p draggable="true" ondragstart="evdragstart(event)" id="e1">
+						</p>
+						<h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
+					        </h5>
+						<ul draggable="true" ondragstart="evdragstart(event)" id="e3">
+					        </ul>
+					</div>
+					<audio controls><source src="audio files/Good Morning.m4a" type="audio/mpeg"></audio>
+					<div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
+						<p draggable="true" ondragstart="evdragstart(event)" id="e1">
+						</p>
+                                                <h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
+                                                </h5>
+                                                <ul draggable="true" ondragstart="evdragstart(event)" id="e3">
+                                                </ul>
+                                        </div> 
+                                        <audio controls><source src="audio files/Good Afternoon.m4a" type="audio/mpeg"></audio>
+                                        <div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
+                                                <p draggable="true" ondragstart="evdragstart(event)" id="e1">
+					        </p>
+						<h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
+						</h5>
+						<ul draggable="true" ondragstart="evdragstart(event)" id="e3">
+						</ul>
+					</div>
+					<audio controls><source src="audio files/Good Night.m4a" type="audio/mpeg"></audio>
+					<div id="dropzone" ondragover="evdragover(event)" ondrop="evdrop(event)">
+						<p draggable="true" ondragstart="evdragstart(event)" id="e1">
+						</p>
+						<h5 draggable="true" ondragstart="evdragstart(event)" id="e2">
+						</h5>
+						<ul draggable="true" ondragstart="evdragstart(event)" id="e3">
+						</ul>
+					</div>
+				</div>
+				<div id="origin" ondragover="evdragover(event)" ondrop="evdrop(event,this)">
+					<img src="images/morning.png" alt="logo"
+					     draggable="true" ondragstart="evdragstart(event)" id="e4"/>
+				</div>
+			</div>
+			<button id="submitButton" class='checkme' data-tab='exercise1'>Check Answers</button>
+		</div>
 
 	<div class="exercise-content" id="exercise2">
 			<p>Write original sentences using the following nouns</p>
