@@ -8,7 +8,7 @@
 </head>
 
 <body>
-	
+	<script src="jsfiles/greetings.js"></script>
     <div class="tab">
     <button class="tablinks" data-tab="exercise1">Matching</button>
     <button class="tablinks" data-tab="exercise2">Write Sentences</button>
@@ -198,20 +198,5 @@ let draggedItem = null;
 
 
 </script>
-	<script src="greetings.js"></script>
-		function evdragstart(ev) {
-    ev.dataTransfer.setData("text",ev.target.id);	 
-}
-function evdragover (ev) {
-    ev.preventDefault();
-}
-function evdrop(ev,el) {
-    ev.stopPropagation();
-    ev.preventDefault();
-    data=ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-	</script>
-
 </body>
 </html>
