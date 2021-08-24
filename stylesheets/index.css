@@ -1,11 +1,11 @@
 * {
     margin:0;
-
+    background-image: url("images/girlStudying.jpg");
+    background-size:cover;
     }
 
 body {
-    background-image: url("images/girlStudying.jpg");
-    background-size:cover;
+
 }
 
 .center {
