@@ -7,11 +7,29 @@
             <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
         </head>
     <body>
-<div class="center">
-        <img class="logo" onclick="index.html" src="images/yellowBeehive.png">
-        <p class="logoParagraph" onclick="index.html">BEEHIVE EDUCATION</p>
-        <button id="button";>Login/Sign Up</button>
-</div>
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8"/>
+            <meta name="viewport" content ="width=device-width, initial-scale=1.0"/>
+            <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+            <link rel="stylesheet" type="text/css" href="styles.css">
+        </head>
+    <body>
+
+        <header>
+    <img class="logo" onclick="index.html" src="yellowBeehive.png">
+    <p class="logoParagraph" onclick="index.html">BEEHIVE EDUCATION</p>
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Community</a></li>
+        <li><a href="">Resources</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="" class="loginBtn"></a>Signup/Login</li>
+    </ul>
+</header>
+
+
         
 <div class="popup">
 	<div class="popup-content">
@@ -21,10 +39,13 @@
 		<input type="password" placeholder="Password">
 		<a href="#" class="button">Login</a>
 	</div>
+    <div class="close">+</div>
 </div>
 
-        
-	    <script src="jsfiles/login.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="login.js"></script>
+</body>
+</html>
 </body>
 </html>
 
