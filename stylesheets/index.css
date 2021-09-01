@@ -2,6 +2,12 @@
     margin:0;
 }
 
+html { 
+  background: url("../girlStudying.jpg") no-repeat center fixed;
+  background-size: cover;
+
+}
+
 header {
     display:block;
     width:100%;
